@@ -1,5 +1,5 @@
-INSERT INTO folders (folder_name, date_created)
+INSERT INTO folders (folder_name)
 VALUES
-('Important', '08-12-2019'),
-('Quick Notes', '07-13-2019'),
-('DnD','09-16-2019');
+('Important'),
+('Quick Notes'),
+('DnD');

@@ -7,12 +7,13 @@ const helmet = require('helmet');
 
 const app = express();
 const { NODE_ENV } = require('./config');
-const morganOption = (NODE_ENV === 'production' ? 'tiny' : 'common');
+/* const morganOption = (NODE_ENV === 'production' ? 'tiny' : 'common'); */
+const morganSetting = process.env.NODE_ENV === 'production' ? 'tiny' : 'common'
 
 const foldersRouter = require('./folders/folders-router');
 const notesRouter = require('./notes/notes-router');
 
-app.use(morgan(morganOption));
+app.use(morgan(morganSetting));
 app.use(helmet());
 app.use(cors());
 
